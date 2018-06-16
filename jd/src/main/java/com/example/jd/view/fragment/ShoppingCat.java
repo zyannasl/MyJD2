@@ -12,10 +12,10 @@ import com.example.mvp.mvp.BasePresenter;
 
 import java.util.List;
 
-//public class ShoppingCat extends BaseFragment implements ICarFragmentView {
+public class ShoppingCat extends BaseFragment implements ICarFragmentView {
 
 
-   /* @Override
+    @Override
     public void showList(List<CarBean.DataBean> groupList, List<List<CarBean.DataBean.ListBean>> childList) {
 
     }
@@ -42,7 +42,7 @@ import java.util.List;
 
     @Override
     protected int bindLayoutId() {
-        return 0;
+        return R.layout.fragment_car;
     }
 
     @Override
@@ -59,4 +59,4 @@ import java.util.List;
     public void serverFail(String msg) {
 
     }
-}*/
+}

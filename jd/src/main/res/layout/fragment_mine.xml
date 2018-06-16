@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/mine_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@mipmap/b5a"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/mine_my"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="92dp"
+        android:src="@mipmap/user" />
+
+    <TextView
+        android:id="@+id/mine_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/mine_my"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="115dp"
+        android:text="登录/注册 >"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/mine_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+
+        android:layout_marginEnd="17dp"
+        android:src="@mipmap/my_msg_bai" />
+
+    <ImageView
+        android:id="@+id/mine_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="67dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/my_set_bai" />
+
+
+</RelativeLayout>

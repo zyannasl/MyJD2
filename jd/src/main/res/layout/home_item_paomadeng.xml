@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京东快报"
+            android:textSize="20dp" />
+        <ViewFlipper
+            android:paddingLeft="5dp"
+            android:id="@+id/view_filpper"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/anim01"
+            android:outAnimation="@anim/anim02"
+            >
+
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

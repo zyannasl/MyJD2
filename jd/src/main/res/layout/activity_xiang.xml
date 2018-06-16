@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.XiangActivity">
+    <LinearLayout
+        android:id="@+id/xq_liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/xq_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/xq_renmingbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/xq_price"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:text="¥"
+                android:textColor="#FF0000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/xq_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:text="xxxxxx"
+                android:textColor="#FF0000"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/xq_guangzhu"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/xq_renmingbi"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="19dp"
+                android:src="@mipmap/normalheart" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/xq_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="xxxxx"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/xq_su"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="xxxxx"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/xq_xiaoxi"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/lianxi" />
+
+        <ImageView
+            android:id="@+id/xq_dianpu"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/dianpu" />
+
+        <ImageView
+            android:id="@+id/xq_shopcar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/shopcar" />
+
+        <TextView
+            android:id="@+id/xq_addshopcar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="加入购物车"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

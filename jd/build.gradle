@@ -47,6 +47,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.jph.takephoto:takephoto_library:4.0.3'
+    implementation 'com.yanzhenjie:permission:1.0.5'
+    implementation 'com.android.support:multidex:1.0.1'
     implementation project(':mvp')
 }
 configurations.all {

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/mymsg_tou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="个人信息"
+        android:textSize="30dp" />
+    <RelativeLayout
+        android:id="@+id/icon_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mymsg_tou"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:text="头像"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/mymsg_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="11dp"
+           />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/name_msg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/icon_msg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:text="用户名"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/mymsg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:text="mysg_name"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/nicheng_msg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/name_msg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:text="昵称"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/mymsg_nicheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:text="mymsg_nicheng"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sex_msg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/nicheng_msg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:text="性别"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/mymsg_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:text="mymsg_sex"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/brthday_msg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/sex_msg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:text="出生日期"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/mymsg_brthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:text="mymsg_brthday"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mymsg_unlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="退出登录" />
+
+
+
+
+</RelativeLayout>

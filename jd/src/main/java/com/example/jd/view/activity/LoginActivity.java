@@ -42,7 +42,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements ILogi
                 break;
 
             case R.id.login_button:
-                loginPresenter.login(name.getText().toString(), password.getText().toString());
+                presenter.login(name.getText().toString(), password.getText().toString());
                 //跳转
                 Intent data = new Intent(LoginActivity.this, HomePagerActivity.class);
                 startActivity(data);

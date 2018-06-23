@@ -6,7 +6,7 @@ import com.example.mvp.mvp.IBaseView;
 import java.util.List;
 
 public interface ICarView extends IBaseView {
-    public interface ICarFragmentView {
-        void showList(List<CarBean.DataBean> groupList, List<List<CarBean.DataBean.ListBean>> childList);
-    }
+
+        void showCar(List<CarBean.DataBean> groupList, List<List<CarBean.DataBean.ListBean>> childList);
+
 }

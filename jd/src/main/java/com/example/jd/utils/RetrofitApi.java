@@ -9,6 +9,8 @@ import com.example.jd.bean.HomeBean;
 import com.example.jd.bean.LoginBean;
 import com.example.jd.bean.RegBean;
 import com.example.jd.bean.SelectBean;
+import com.example.jd.bean.UpdateBean;
+import com.example.jd.bean.UserMsgBean;
 import com.example.jd.bean.XiangBean;
 
 import java.util.List;
@@ -55,4 +57,13 @@ public interface RetrofitApi {
     @POST("user/reg")
     @FormUrlEncoded
     Observable<RegBean> reg(@FieldMap Map<String,String> p);
+
+    @POST("user/getUserInfo")
+    @FormUrlEncoded
+    Observable<UserMsgBean> userMsg(@FieldMap Map<String,String> p);
+
+    @POST("user/updateNickName")
+    @FormUrlEncoded
+    Observable<UpdateBean> updateNicheng(@FieldMap Map<String,String> p);
+
 }

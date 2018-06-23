@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.ZhuceActivity">
+    <ImageView
+        android:id="@+id/zhuce_fanhui"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="18dp"
+        android:src="@mipmap/fanhui" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="63dp"
+        android:text="您好"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/xiao" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="133dp"
+        android:text="欢迎来到京东"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/zhuce_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="254dp"
+        android:layout_toEndOf="@+id/zhuce_fanhui"
+        android:text="+86"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/zhuce_number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/zhuce_text"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入手机号" />
+
+    <EditText
+        android:id="@+id/zhuce_pwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zhuce_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="请输入不少于六位密码" />
+
+    <Button
+        android:id="@+id/zhuce_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:text="提交注册" />
+
+
+</RelativeLayout>

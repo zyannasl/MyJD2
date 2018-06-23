@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,9 +35,10 @@ public class XiangActivity extends BaseActivity<XiangPresenter> implements IXian
     private ImageView shopcar;
     private TextView addshopcar;
     private String pid;
-    private AddCarPresenter addCarPresenter;
     private ImageView guanzhu;
     private Boolean falg = false;
+    private String uid;
+    private String token;
 
 
     @Override
@@ -57,15 +59,15 @@ public class XiangActivity extends BaseActivity<XiangPresenter> implements IXian
             case R.id.xq_addshopcar:
                 //获取uid pid token
                 SharedPreferences sp = getSharedPreferences("User", Context.MODE_PRIVATE);
-                String uid = sp.getString("uid", "");
-                String token = sp.getString("token", "");
+                uid = sp.getString("uid", "");
+                token = sp.getString("token", "");
                 //判断是否登录
                 if (token == null || token == "") {
                     Toast.makeText(this, "还没登录, 请先登录", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(XiangActivity.this, LoginActivity.class);
                     startActivity(intent);
                 } else {
-                    AddCarPresenter addCarPresenter = new AddCarPresenter();
+                    AddCarPresenter addCarPresenter = new AddCarPresenter(this);
                     addCarPresenter.addCarData(uid, pid, token);
                 }
 
@@ -98,8 +100,8 @@ public class XiangActivity extends BaseActivity<XiangPresenter> implements IXian
         if (intent != null) {
             pid = intent.getStringExtra("pid");
         }
-
-
+        Log.e("xiangActivity",pid);
+        presenter.xiangData(pid);
     }
 
     @Override

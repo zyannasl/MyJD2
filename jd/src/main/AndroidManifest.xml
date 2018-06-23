@@ -3,6 +3,16 @@
     package="com.example.jd">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".MyAPP"
@@ -25,7 +35,11 @@
         <activity android:name=".view.activity.XiangActivity" />
         <activity android:name=".view.activity.MsgActivity" />
         <activity android:name=".view.activity.LoginActivity" />
-        <activity android:name=".view.activity.ZhuceActivity"></activity>
+        <activity android:name=".view.activity.ZhuceActivity" />
+        <activity android:name=".view.activity.UpdateNiCheng" />
+        <activity android:name=".view.activity.UpdateSex" />
+        <activity android:name=".view.activity.MyMsgActivity"/>
+        <activity android:name=".view.activity.UpdaterBrithday"></activity>
     </application>
 
 </manifest>

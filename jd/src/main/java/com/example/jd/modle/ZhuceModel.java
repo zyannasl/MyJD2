@@ -1,8 +1,6 @@
 package com.example.jd.modle;
 
-import android.util.Log;
-
-import com.example.jd.bean.AddCarBean;
+import com.example.jd.bean.RegBean;
 import com.example.jd.utils.RetrofitUtils;
 import com.example.mvp.mvp.BaseModel;
 
@@ -11,31 +9,31 @@ import java.util.HashMap;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class AddCarModel extends BaseModel {
+public class ZhuceModel extends BaseModel{
     private RetrofitUtils retrofitUtils;
-    public void addCar(String uid, String pid, String token, final IAddCarModel iAddCarModel){
+
+    public void zhuce(String mobile, String password, final IZhuceModel iZhuceModel){
         retrofitUtils=RetrofitUtils.getInstance();
         HashMap<String, String> params = new HashMap<>();
-        params.put("uid", uid);
-        params.put("pid", pid);
-        params.put("token", token);
-        retrofitUtils.getApi().addCar(params)
+        params.put("mobile", mobile);
+        params.put("password", password);
+        retrofitUtils.getApi().reg(params)
                 .subscribeOn(io.reactivex.schedulers.Schedulers.io())
                 .observeOn(io.reactivex.android.schedulers.AndroidSchedulers.mainThread())
-                .subscribe(new Observer<AddCarBean>() {
+                .subscribe(new Observer<RegBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {
 
                     }
 
                     @Override
-                    public void onNext(AddCarBean addCarBean) {
-                        iAddCarModel.success(addCarBean);
+                    public void onNext(RegBean regBean) {
+                        iZhuceModel.success(regBean);
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("addcarmodel",e+"");
+
                     }
 
                     @Override
@@ -44,7 +42,8 @@ public class AddCarModel extends BaseModel {
                     }
                 });
     }
-    public interface IAddCarModel {
-        void success(AddCarBean addCarBean);
+    public interface IZhuceModel {
+        void success(RegBean regBean);
+
     }
 }
